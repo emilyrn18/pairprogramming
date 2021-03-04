@@ -29,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void recordAction(View view){
         Date currentTime = Calendar.getInstance().getTime();
-        SimpleDateFormat format = new SimpleDateFormat("HH:mm:ss");
-        times += currentTime + "\n";
+        SimpleDateFormat timeForm = new SimpleDateFormat("HH:mm:ss");
+        times += timeForm.format(currentTime) + "\n";
         list.setText(times);
     }
 }
